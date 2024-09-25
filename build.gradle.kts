@@ -113,6 +113,7 @@ tasks {
 }
 
 java {
+  withSourcesJar()
   val javaVersion = JavaVersion.toVersion(targetJavaVersion)
   if (JavaVersion.current() < javaVersion) {
     toolchain.languageVersion.set(JavaLanguageVersion.of(targetJavaVersion))
